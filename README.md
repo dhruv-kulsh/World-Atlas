@@ -1,4 +1,10 @@
-# React + Vite
+# World-Atlas
+
+An App where you can discover all about the various countries.
+
+---
+
+## React + Vite Setup
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
