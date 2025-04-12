@@ -1,9 +1,10 @@
 import { useEffect, useState, useTransition } from "react";
+import { CountryCard } from "../components/Layout/CountryCard";
 
 export const Country = () => {
 
     const [countries, setCountries] = useState([]);
-    
+    const [loader, setLoader] = useState(true);
 
     const getApiData = async () => {
         try {
@@ -11,12 +12,12 @@ export const Country = () => {
             const data = await res.json();
             console.log(`The data is `, data);
             setCountries(data);
+            setLoader(false);
             return data; // Not returning countries as it would not be updated
-        } 
+        }
         catch (error) {
             console.log(error);
         }
-
 
     }
 
@@ -27,10 +28,28 @@ export const Country = () => {
 
     // console.log(allCountryData);
 
+    if (loader) {
+        return <h1 className="loader">Loading...</h1>
+
+    }
+
 
     return (
-        <>
-            {countries.length > 0 ? <h1>{countries[0].name.common}</h1> : "Loading..."}
-        </>
+
+        <section className="country-section">
+            <ul className="grid grid-four-cols">
+                {
+                    countries.map((curcountry, index) => {
+                        // return (
+                        //         <ul key={index}>
+                        //             <li>{curcountry.name.common}</li>
+                        //             <li>{curcountry.population}</li>
+                        //         </ul>
+                        // )
+                        return <CountryCard key = {index} country = {curcountry}/>
+                    })
+                }
+            </ul>
+        </section>
     )
 }
