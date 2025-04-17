@@ -1,10 +1,13 @@
-import { useEffect, useState, useTransition } from "react";
+import { useEffect, useState } from "react";
 import { CountryCard } from "../components/Layout/CountryCard";
+import { SearchFilter } from "../components/UI/SearchFilter";
 
 export const Country = () => {
 
     const [countries, setCountries] = useState([]);
     const [loader, setLoader] = useState(true);
+    const [search, setSearch] = useState("");
+    const [filter, setFilter] = useState("All");
 
     const getApiData = async () => {
         try {
@@ -37,6 +40,7 @@ export const Country = () => {
     return (
 
         <section className="country-section">
+            <SearchFilter search = {search} setSearch = {setSearch} filter = {filter} setFilter = {setFilter}/>
             <ul className="grid grid-four-cols">
                 {
                     countries.map((curcountry, index) => {

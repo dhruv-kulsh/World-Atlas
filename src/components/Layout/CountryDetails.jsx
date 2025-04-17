@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { useParams, NavLink } from "react-router-dom"
 import { useState, useEffect } from "react";
 
 export const CountryDetails = () => {
@@ -27,7 +27,7 @@ export const CountryDetails = () => {
     }
 
     useEffect(() => {
-        const promise = getApiData();        
+        const promise = getApiData();
     }, []);
 
     // useEffect(() => {
@@ -53,7 +53,7 @@ export const CountryDetails = () => {
                 <div className="country-content">
                     <p className="card-title">{country.name.official}</p>
                     <div className="infoContainer">
-                        <p> 
+                        <p>
                             <span className="card-description">Native Names: </span>
                             {
                                 Object.keys(country.name.nativeName).map((key) => {
@@ -84,19 +84,24 @@ export const CountryDetails = () => {
                         <p>
                             <span className="card-description">Currencies:</span>
                             {/* {country.currencies.INR.name}  Will be applicable if only 1 currency is there */}
-                            {Object.keys(country.currencies).map((currElem) =>{
+                            {Object.keys(country.currencies).map((currElem) => {
                                 return country.currencies[currElem].name
                             })}
                         </p>
                         <p>
                             <span className="card-description">Languages:</span>
                             {
-                            Object.keys(country.languages).map((currElem) =>{
-                                return country.languages[currElem]
-                            }).join(", ")
+                                Object.keys(country.languages).map((currElem) => {
+                                    return country.languages[currElem]
+                                }).join(", ")
                             }
                         </p>
                     </div>
+                </div>
+                <div className="country-card-backBtn">
+                    <NavLink to="/country" className="backBtn">
+                        <button>Back</button>
+                    </NavLink>
                 </div>
             </div>
         </section>
