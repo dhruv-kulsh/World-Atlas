@@ -51,9 +51,9 @@ export const CountryDetails = () => {
                     <img src={country.flags.svg} alt={country.flags.alt} className="flag" />
                 </div>
                 <div className="country-content">
-                    <p className="card-tile">{country.name.official}</p>
-                    <div className="info-container">
-                        <p>
+                    <p className="card-title">{country.name.official}</p>
+                    <div className="infoContainer">
+                        <p> 
                             <span className="card-description">Native Names: </span>
                             {
                                 Object.keys(country.name.nativeName).map((key) => {
