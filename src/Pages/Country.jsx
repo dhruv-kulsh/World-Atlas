@@ -36,14 +36,32 @@ export const Country = () => {
 
     }
 
+    const searchCountry = (country) => {
+        if(search){
+            return country.name.common.toLowerCase().includes(search.toLowerCase())
+        }
+
+        return country
+    }
+
+    const filterRegion = (country) => {
+        if(filter == "All") return country;
+        if(filter.toLowerCase() == country.region.toLowerCase()){
+            return country;
+        }
+    }
+
+    const filterCountries = countries.filter((country) => searchCountry(country) && filterRegion(country));
+
 
     return (
 
         <section className="country-section">
-            <SearchFilter search = {search} setSearch = {setSearch} filter = {filter} setFilter = {setFilter}/>
+            <SearchFilter search = {search} setSearch = {setSearch} filter = {filter} setFilter = {setFilter}
+             countries = {countries} setCountries = {setCountries}/>
             <ul className="grid grid-four-cols">
                 {
-                    countries.map((curcountry, index) => {
+                    filterCountries.map((curcountry, index) => {
                         // return (
                         //         <ul key={index}>
                         //             <li>{curcountry.name.common}</li>

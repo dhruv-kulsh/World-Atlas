@@ -10,9 +10,9 @@ export const Contact = () => {
             <h2 className="container-title">Contact Us</h2>
             <div className="contact-wrapper container">
                 <form action={handleFormSubmit}>
-                    <input type="text" className="from-control" required autoComplete="false" placeholder="Enter Your Name" name="username" />
-                    <input type="email" className="from-control" required autoComplete="false" placeholder="Enter Your Email" name="email" />
-                    <input type="message" className="from-control" required autoComplete="false" placeholder="Enter Your Message" name="message" />
+                    <input type="text" className="from-control" required autoComplete="off" placeholder="Enter Your Name" name="username" />
+                    <input type="email" className="from-control" required autoComplete="off" placeholder="Enter Your Email" name="email" />
+                    <input type="message" className="from-control" required autoComplete="off" placeholder="Enter Your Message" name="message" />
                     <button type="submit" value="send">Send</button>
                 </form>
             </div>
