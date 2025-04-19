@@ -1,6 +1,6 @@
 # World-Atlas
 
-An App where you can discover all about the various countries.
+An App where you can discover all about the various countries. Available with Search and Sort features
 
 Find the Deployed Website over here:- https://reactexplorecountryproject.netlify.app/
 
