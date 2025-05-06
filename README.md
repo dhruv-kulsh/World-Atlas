@@ -9,50 +9,36 @@ Find the Deployed Website over here:- https://reactexplorecountryproject.netlify
 🌍 World Atlas – Personal Project
 
 Key Features and Functionalities
-Multi-Page Design using React Router DOM:
+## 🌍 World Atlas – Key Features
 
-Implemented client-side routing to create seamless navigation between the homepage, country detail pages, and filtered lists (e.g., by continent).
+1. **Multi-Page Design using React Router DOM**
+   - Implemented client-side routing for seamless navigation between the homepage, country detail pages, and filtered lists.
+   - Enabled deep linking (e.g., `/country/India`) for bookmarking and sharing.
 
-Enabled deep linking (e.g., /country/India) so each country's page can be bookmarked or shared.
+2. **Live API Integration**
+   - Fetched real-time country data from a public REST API (e.g., [REST Countries API](https://restcountries.com/)).
+   - Displayed population, area, currencies, flags, timezones, capital cities, and more.
 
-Live API Integration:
+3. **Search Functionality**
+   - Integrated a real-time search bar for quick lookup by country name.
+   - Implemented case-insensitive search with live filtering.
 
-Fetched real-time country data from a public REST API (such as REST Countries API or similar).
+4. **Sorting Options**
+   - Allowed sorting countries alphabetically, by population, or by area.
+   - Supported both ascending and descending order with intuitive UI indicators.
 
-Displayed dynamic data including population, area, currencies, flags, timezones, and capital cities.
+5. **Continent-Level Filtering**
+   - Enabled filtering of countries by continent (e.g., Asia, Europe, Africa).
+   - Used dropdowns or buttons for smooth user interaction.
 
-Search Functionality:
+6. **Responsive UI**
+   - Designed with mobile-first principles using CSS Flexbox and Grid.
+   - Ensured optimal layout across all device sizes.
 
-Built a real-time search bar to help users quickly find a country by name.
-
-Implemented case-insensitive matching and instant filtering while typing.
-
-Sorting Options:
-
-Allowed users to sort countries alphabetically, by population, or by area.
-
-Sorting was implemented both ascending and descending, with clear UI indicators.
-
-Continent-Level Filtering:
-
-Provided filters to view countries based on their continent (e.g., Asia, Europe, Africa).
-
-Used dropdowns or buttons to let users easily switch between region views.
-
-Responsive UI:
-
-Designed using CSS to ensure mobile-first responsiveness.
-
-Flexbox and Grid layouts used for smooth adjustments across devices.
-
-User Experience Enhancements:
-
-Used loading indicators during API calls.
-
-Displayed meaningful error messages if the API failed or data was not found.
-
-Included animations or transitions for a polished feel.
-
+7. **User Experience Enhancements**
+   - Included loading indicators during API calls.
+   - Displayed meaningful error messages when data fetch fails.
+   - Added transitions and animations for a polished look and feel.
 
 
 ## React + Vite Setup
